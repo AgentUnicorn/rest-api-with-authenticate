@@ -1,4 +1,5 @@
 const { MongoClient } = require('mongodb');
+require('dotenv').config()
 
 // Connection URI and Database Name (update with your own URI and database name)
 const dbDriver = process.env.DB_DRIVER || 'mongodb'
