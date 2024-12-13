@@ -1,4 +1,4 @@
-const { connectToDatabase } = require('../configs/db')
+const { connectToDatabase } = require('../../../configs/db')
 const bcrypt = require('bcryptjs')
 
 /**

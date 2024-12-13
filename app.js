@@ -9,7 +9,7 @@ require('dotenv').config()
 
 const port = process.env.PORT || 3000
 
-const routes = require('./src/routes/index')(router, {})
+const routes = require('./src/api/v1/routes/index')(router, {})
 
 const corsOptions = {
     origin: '*',
@@ -27,7 +27,7 @@ app.use(
         extended: true,
     })
 );
-app.use('/api', routes)
+app.use('/api/v1', routes)
 // app.engine('hbs', engine({defaultLayout: 'main', extname: '.hbs'}));
 // app.set('views', path.join(__dirname, 'src/views'));
 // app.set('view engine', 'hbs');

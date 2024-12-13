@@ -15,7 +15,7 @@ const connectToDatabase = async () => {
     if (db) return db; // Reuse the existing connection if already connected
 
     try {
-        const client = new MongoClient(uri, { useUnifiedTopology: true });
+        const client = new MongoClient(uri);
         await client.connect();
         console.log('Connected to MongoDB');
         db = client.db(dbUsers); // Select the database
